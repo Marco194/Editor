@@ -16,6 +16,14 @@ namespace EditorHtml
         public Form1()
         {
             InitializeComponent();
+            string path = @"C:\Users\Luqman\Dekstop\EditorHtml\stylecode.txt";
+            string riga;
+            // ciclo per inserire una parte del codice in modo da far funzionare il css
+            StreamReader sr = new StreamReader(path);
+            while((riga = sr.Readline()) != null)
+            {
+                rtb1.Tetx = rtb1.Text + riga;
+            }
            
         }
 
